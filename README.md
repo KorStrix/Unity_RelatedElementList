@@ -16,15 +16,13 @@ Custom PC Input과 정의된 함수 연결 입니다. <br>
 
 ## 주 기능
 
-Element와 Element간의 관계를 담는 Collection입니다. <br>
-사용자는 Element와 관계를 정의하여 직접 구현할 수 있습니다. <br>
+**Element와 Element간의 관계를 담는 Collection입니다. <br>
+사용자는 Element와 관계를 정의하여 직접 구현할 수 있습니다.** <br>
 
-프로젝트 내부에 코드가 첨부되어 있지만, ![링크](https://github.com/KorStrix/Unity_RelatedElementList/blob/master/Assets/StrixLibrary/Example/RelatedByElementsList/RelatedByElementsList_Example_Bool.cs) <br>
-
-간단하게 설명하자면, Bool Calculator예시로 <br>
+프로젝트 내부에 코드가 첨부되어 있지만, [링크](https://github.com/KorStrix/Unity_RelatedElementList/blob/master/Assets/StrixLibrary/Example/RelatedByElementsList/RelatedByElementsList_Example_Bool.cs) <br>
+간단하게 설명하기 위해, Bool Calculator예시로 들겠습니다. <br>
 
 ```csharp
-
 // Bool 과 Bool 사이의 관계를 정의합니다.
 // SubString을 통해 간단하게 Display합니다.
 enum EBoolCalculateType
@@ -106,9 +104,42 @@ public class BoolCalculator_List_Drawer : RelatedByElementsList_Drawer<RelatedBy
 }
 
 #endif
-
 ```
 
+## 인풋 시스템 예시
+프로젝트에서 플레이를 누르고, 숫자키 1, 2 등을 누르면 로그가 출력됩니다. <br>
+인풋 시스템은 Command와 Input으로 이루어진 List이며 각 요쇼의 설명은 하단과 같습니다. <br>
+
+**(제가 임의로 네이밍 후 구현한 예시입니다.)**
+
+### Command
+커맨드는 프로그래머가 구현한 명령입니다.
+Init, Execute, Undo 등의 함수가 있으며, 반드시 구현해야 할 함수는
+Execute 함수입니다.
+
+다음은 프로젝트에 있는 코드 예시입니다. [링크](https://github.com/KorStrix/Unity_RelatedElementList/blob/master/Assets/StrixLibrary/Example/RelatedByElementsList/CommandList_Example.cs)
+
+```csharp
+public class Command_PrintLog_1 : CommandBase
+{
+    public override void DoExcute(ref SInputValue sInputValue, ref bool bIsExcuted_DefaultIsTrue)
+    {
+        Debug.Log("1");
+    }
+}
+
+public class Command_PrintLog_2 : CommandBase
+{
+    public override void DoExcute(ref SInputValue sInputValue, ref bool bIsExcuted_DefaultIsTrue)
+    {
+        Debug.Log("2");
+    }
+}
+```
+
+### Input
+인풋은 여러 정의된 키보드 & 마우스 입력으로 이루어져있으며,
+각 입력과 입력 사이에 And, Or, Not 등의 관계를 묶을 수 있습니다.
 
 ## 연락처
 유니티 개발자 모임 카카오톡 & 디스코드 링크입니다.
