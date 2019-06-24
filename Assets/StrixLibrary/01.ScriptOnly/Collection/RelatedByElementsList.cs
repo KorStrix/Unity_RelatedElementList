@@ -35,11 +35,35 @@ public abstract class CRelateByOther<CLASS_DERIVED, TYPE_ITEM_RELATE, TYPE_RESUL
     [HideInInspector]
     public TYPE_ITEM_RELATE pRelateType;
 
+    /// <summary>
+    /// 다른 아이템이 필요한지 체크합니다.
+    /// </summary>
+    /// <returns></returns>
     abstract public bool IRelateByOther_IsRequireOtherItem();
+
+    /// <summary>
+    /// 요소의 Display할 이름을 얻습니다.
+    /// </summary>
+    /// <returns></returns>
     abstract public string IRelateByOther_GetDisplayName();
+
+    /// <summary>
+    /// 관계의 Display할 이름을 얻습니다.
+    /// </summary>
+    /// <param name="pRelateType"></param>
+    /// <returns></returns>
     abstract public string IRelateByOther_GetDisplayRelateName(TYPE_ITEM_RELATE pRelateType);
 
+    /// <summary>
+    /// 해당 List 전체의 Display할 이름을 얻습니다.
+    /// </summary>
+    /// <returns></returns>
     abstract public ValueDropdownList<TYPE_ITEM_RELATE> IRelateByOther_GetEditorDisplayNameList();
+
+    /// <summary>
+    /// List의 식의 결과를 얻습니다.
+    /// </summary>
+    /// <returns></returns>
     abstract public TYPE_RESULT GetResult();
 
     public bool IRelateByOther_IsBracket_Start() { return iBracket_Start_Count > 0; }

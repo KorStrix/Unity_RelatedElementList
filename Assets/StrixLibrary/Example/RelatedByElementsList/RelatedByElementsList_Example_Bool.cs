@@ -30,17 +30,21 @@ namespace StrixLibrary_Example
 
         /* enum & struct declaration                */
 
+        // Bool 과 Bool 사이의 관계를 정의합니다.
+        // SubString을 통해 간단하게 Display합니다.
         public enum EBoolCalculateType
         {
             Nothing,
-            [RegistSubString("&")]
+            [RegistSubString("&&")]
             And,
-            [RegistSubString("|")]
+            [RegistSubString("||")]
             Or,
             [RegistSubString("^")]
             Xor,
         }
 
+        // 계산기를 정의합니다.
+        // 계산기는 CRelateByOther를 상속받아야 합니다.
         [System.Serializable]
         public class BoolCalculator : CRelateByOther<BoolCalculator, EBoolCalculateType, bool>
         {
