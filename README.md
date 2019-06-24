@@ -17,8 +17,12 @@ Custom PC Input과 정의된 함수 연결 입니다. <br>
 
 ## 주 기능
 
-**Element와 Element간의 관계를 담는 Collection입니다. <br>
+1. **Element와 Element간의 관계를 담는 Collection입니다. <br>
 사용자는 Element와 관계를 정의하여 직접 구현할 수 있습니다.** <br>
+
+2. **또한 괄호가 맞지 않을 경우 빨간 배경으로 알려줍니다.**
+
+<br>
 
 프로젝트 내부에 코드가 첨부되어 있지만, [링크](https://github.com/KorStrix/Unity_RelatedElementList/blob/master/Assets/StrixLibrary/Example/RelatedByElementsList/RelatedByElementsList_Example_Bool.cs) <br>
 간단하게 설명하기 위해, Bool Calculator예시로 들겠습니다. <br>
