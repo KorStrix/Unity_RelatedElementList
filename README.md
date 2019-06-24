@@ -13,6 +13,7 @@ Custom PC Input과 정의된 함수 연결 입니다. <br>
 ### Bool Calculator
 ![](https://github.com/KorStrix/Unity_RelatedElementList/blob/master/ImageForGithub/Bool_Calculator.gif?raw=true)
 
+<br>
 
 ## 주 기능
 
@@ -105,6 +106,8 @@ public class BoolCalculator_List_Drawer : RelatedByElementsList_Drawer<RelatedBy
 
 #endif
 ```
+
+<br>
 
 ## 인풋 시스템 예시
 프로젝트에서 플레이를 누르고, 숫자키 1, 2 등을 누르면 로그가 출력됩니다. <br>
