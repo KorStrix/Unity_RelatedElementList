@@ -113,11 +113,12 @@ public class BoolCalculator_List_Drawer : RelatedByElementsList_Drawer<RelatedBy
 **(제가 임의로 네이밍 후 구현한 예시입니다.)**
 
 ### Command
-커맨드는 프로그래머가 구현한 명령입니다.
-Init, Execute, Undo 등의 함수가 있으며, 반드시 구현해야 할 함수는
-Execute 함수입니다.
+커맨드는 프로그래머가 구현한 명령입니다. <br>
+Init, Execute, Undo 등의 함수가 있으며, 반드시 구현해야 할 함수는 Execute 함수입니다. <br>
 
 다음은 프로젝트에 있는 코드 예시입니다. [링크](https://github.com/KorStrix/Unity_RelatedElementList/blob/master/Assets/StrixLibrary/Example/RelatedByElementsList/CommandList_Example.cs)
+
+<br>
 
 ```csharp
 public class Command_PrintLog_1 : CommandBase
@@ -137,9 +138,15 @@ public class Command_PrintLog_2 : CommandBase
 }
 ```
 
+<br>
+<br>
+
 ### Input
-인풋은 여러 정의된 키보드 & 마우스 입력으로 이루어져있으며,
-각 입력과 입력 사이에 And, Or, Not 등의 관계를 묶을 수 있습니다.
+인풋은 여러 정의된 키보드 & 마우스 입력으로 이루어져있으며, <br>
+각 입력과 입력 사이에 And, Or, Not 등의 관계를 묶을 수 있습니다. <br>
+![](https://github.com/KorStrix/Unity_RelatedElementList/blob/master/ImageForGithub/InputEventSetting.gif?raw=true)
+
+<br>
 
 ## 연락처
 유니티 개발자 모임 카카오톡 & 디스코드 링크입니다.
